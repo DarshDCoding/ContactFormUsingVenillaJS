@@ -27,100 +27,102 @@
           Thanks for completing the form. We'll be in touch soon!
         </div>
       </div>
-      <form action="/" method="" id="main-form" novalidate>
-        <div class="container">
-          <h1>Contact Us</h1>
-          <div class="name-container">
-            <div class="input-container first-name-container">
-              <label for="first-name"
-                >First Name<span class="astrick">*</span></label
-              >
-              <input
-                type="text"
-                name="first-name"
-                id="first-name"
-                class="input"
-                required
-              />
-                <p class="error"></p>
+      <div class="margin-container">
+        <form action="/" method="" id="main-form" novalidate>
+          <div class="container">
+            <h1>Contact Us</h1>
+            <div class="name-container">
+              <div class="input-container first-name-container">
+                <label for="first-name"
+                  >First Name<span class="astrick">*</span></label
+                >
+                <input
+                  type="text"
+                  name="first-name"
+                  id="first-name"
+                  class="input"
+                  required
+                />
+                  <p class="error"></p>
+              </div>
+              <div class="input-container last-name-container">
+                <label for="last-name"
+                  >Last Name<span class="astrick">*</span></label
+                >
+                <input
+                  type="text"
+                  name="last-name"
+                  id="last-name"
+                  class="input input-container"
+                  required
+                /><p class="error"></p>
+              </div>
             </div>
-            <div class="input-container last-name-container">
-              <label for="last-name"
-                >Last Name<span class="astrick">*</span></label
+            <div class="input-container email-container">
+              <label for="email"
+                >Email Address<span class="astrick">*</span></label
               >
               <input
-                type="text"
-                name="last-name"
-                id="last-name"
-                class="input input-container"
+                type="email"
+                name="email"
+                id="email"
+                class="input"
                 required
               /><p class="error"></p>
             </div>
-          </div>
-          <div class="input-container email-container">
-            <label for="email"
-              >Email Address<span class="astrick">*</span></label
-            >
-            <input
-              type="email"
-              name="email"
-              id="email"
-              class="input"
-              required
-            /><p class="error"></p>
-          </div>
-          <div class="query-type input-container">
-            <label for="query-type"
-              >Query Type<span class="astrick">*</span></label
-            >
-            <div class="options name-container">
-              <div id="general-query-container" class="input radio-input">
-                <input
-                  type="radio"
-                  name="query-type"
-                  id="general-query"
-                  class="radio-options"
-                  value="general"
-                  required
-                />
-                <label for="general-query">General Enquiry</label>
+            <div class="query-type input-container">
+              <label for="query-type"
+                >Query Type<span class="astrick">*</span></label
+              >
+              <div class="options name-container">
+                <div id="general-query-container" class="input radio-input">
+                  <input
+                    type="radio"
+                    name="query-type"
+                    id="general-query"
+                    class="radio-options"
+                    value="general"
+                    required
+                  />
+                  <label for="general-query">General Enquiry</label>
+                </div>
+                <div id="support-request-container" class="input radio-input">
+                  <input
+                    type="radio"
+                    name="query-type"
+                    id="support-request"
+                    class="radio-options"
+                    value="support"
+                    required
+                  />
+                  <label for="support-request">Support Request</label>
+                </div>
               </div>
-              <div id="support-request-container" class="input radio-input">
-                <input
-                  type="radio"
-                  name="query-type"
-                  id="support-request"
-                  class="radio-options"
-                  value="support"
-                  required
-                />
-                <label for="support-request">Support Request</label>
+              <p class="error" id="query-error"></p>
+            </div>
+            <div class="input-container message-contaier">
+              <label for="message">Message<span class="astrick">*</span></label>
+              <textarea
+                name=""
+                id="message"
+                class="input full-width"
+                required
+              ></textarea>
+              <p class="error"></p>
+            </div>
+            <div class="external-term-container">
+              <div class="term-container">
+                <input type="checkbox" name="term-agree" id="term-agree" required />
+                <label for="term-agree"
+                  >I consent to being contacted by the team<span class="astrick"
+                    >*</span></label>
               </div>
+              <p class="error" id="term-error"></p>
             </div>
-            <p class="error" id="query-error"></p>
+            <button type="submit" id="submit-btn">Submit</button>
           </div>
-          <div class="input-container message-contaier">
-            <label for="message">Message<span class="astrick">*</span></label>
-            <textarea
-              name=""
-              id="message"
-              class="input full-width"
-              required
-            ></textarea>
-            <p class="error"></p>
-          </div>
-          <div class="external-term-container">
-            <div class="term-container">
-              <input type="checkbox" name="term-agree" id="term-agree" required />
-              <label for="term-agree"
-                >I consent to being contacted by the team<span class="astrick"
-                  >*</span></label>
-            </div>
-            <p class="error" id="term-error"></p>
-          </div>
-          <button type="submit" id="submit-btn">Submit</button>
-        </div>
-      </form>
+        </form>
+      </div>
     </main>
     <script src="script.js"></script>
   </body>

@@ -42,6 +42,16 @@
 body{
     background-color: var(--primary-green-light);
     font-family: var(--font-karla);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.margin-container{
+    /* border: 2px solid; */
+    width:fit-content;
+    padding: 1rem;
 }
 
 #main-form{
@@ -51,8 +61,6 @@ body{
     padding: 2rem;
     z-index: 100;
     margin: 0% auto;
-    margin-top: 50%;
-    translate: 0% -50%;
 }
 .container{
     width: 100%;

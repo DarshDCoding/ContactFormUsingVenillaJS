@@ -1,24 +1,13 @@
 @media  (max-width:425px) {
+    body{
+        height: 100%;
+    }
     .name-container{
         flex-direction: column;
         gap: 1rem;
     }
-    /* .input{
-        width: 100%;
-    } */
     textarea{
         min-width: 100%;
     }
 
 }
-@media (max-width:380px){
-    form{
-        width: 350px;
-    }
-}
-@media (max-width:330px) {
-    form{
-        width: 300px;
-    }
-}
-

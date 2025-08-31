@@ -169,7 +169,7 @@ input, label{
 
 .term-container input:checked{
     outline: none;
- content: url(/assets/images/icon-checkbox-check.svg);   
+ content: url(./assets/images/icon-checkbox-check.svg);   
 }
 
 .successtoster{

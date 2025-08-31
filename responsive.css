@@ -3,12 +3,13 @@
         flex-direction: column;
         gap: 1rem;
     }
-    .input{
+    /* .input{
         width: 100%;
-    }
+    } */
     textarea{
         min-width: 100%;
     }
+
 }
 @media (max-width:380px){
     form{

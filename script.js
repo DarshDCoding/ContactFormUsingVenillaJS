@@ -28,30 +28,42 @@ radioInputs.forEach((input) => {
 //validating form
 form.addEventListener("submit", (e)=>{
     e.preventDefault()
-    const elementList = [firstName, lastName, email, message]
-    elementList.forEach(element =>{
-        const error= element.nextElementSibling;
-        if (!element.checkValidity()){
-            element.style.borderColor = "var(--primary-red)";
-            error.innerText = element.validationMessage;
+        if (form.checkValidity()){
+        const toster= document.getElementById("toster");
+        toster.classList.add("appear")
+        setTimeout(()=>{
+            toster.classList.remove("appear")
+            form.reset()
+        },2000);
+
+
+    } else{
+        const elementList = [firstName, lastName, email, message]
+        // const allElements = [firstName, lastName, email, message, query, ]
+        elementList.forEach(element =>{
+            const error= element.nextElementSibling;
+            if (!element.checkValidity()){
+                element.style.borderColor = "var(--primary-red)";
+                error.innerText = element.validationMessage;
+            }
+            else{
+                element.style.borderColor = "var(--neutral-gray-dark)";
+                error.innerText = "";
+            }
+        });
+        try{
+            query = document.querySelector('input[name="query-type"]:checked').value;
+            queryError.innerText = ""
         }
-        else{
-            element.style.borderColor = "var(--neutral-gray-dark)";
-            error.innerText = "";
+        catch (error){
+            queryError.innerText = "This field is required"
         }
-    });
-    try{
-        query = document.querySelector('input[name="query-type"]:checked').value;
-        queryError.innerText = ""
+        const termError= document.getElementById("term-error")
+        try{
+            document.querySelector('input[name="term-agree"]:checked').value;
+            termError.innerText = ""
+        }catch (error){
+            termError.innerText = "To submit this form, please consent to being contacted"
+        };
     }
-    catch (error){
-        queryError.innerText = "This field is required"
-    }
-    const termError= document.getElementById("term-error")
-    try{
-        document.querySelector('input[name="term-agree"]:checked').value;
-        termError.innerText = ""
-    }catch (error){
-        termError.innerText = "To submit this form, please consent to being contacted"
-    };
 })

@@ -173,7 +173,9 @@ input, label{
 }
 
 .successtoster{
+    position: fixed;
     padding: 1.5rem 1rem;
+    width: max-content;
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
@@ -181,12 +183,16 @@ input, label{
     background-color: var(--neutral-gray-dark);
     font-size: 0.8rem;
     border-radius: 0.8rem;
-    translate: 0% 150%;
-    display: none;
+    transform: translate(50%);
+    top: -100%;
 
-    z-index: 10;
-    transition: all 2s;
+    transition: top 1s ease-in-out ;
 }
+
+.appear{
+    top:10%;
+}
+
 .toster-heading{
     display: flex;
     gap: 0.6rem;
@@ -197,9 +203,6 @@ input, label{
     font-weight: var(--font-normal);
 }
 
-.appear{
-    translate: 0% 100%;
-}
 
 .first-name-container input, .last-name-container input , #email, .full-width, textarea{
     font-family: var(--font-karla);
